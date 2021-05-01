@@ -1,0 +1,27 @@
+{
+  "name": "Sollet.io Auto Approval",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Auto approve all incoming tx, Use with caution !",
+  "homepage_url": "http://leodesigaux.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "https://www.sollet.io/",
+    "https://www.sollet.io/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.sollet.io/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
